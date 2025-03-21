@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, EB_Garamond } from "next/font/google";
 import localfont from "next/font/local";
 import "./globals.css";
 
@@ -13,20 +13,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const STKserif = localfont({
-  src: [
-    {
-      path: "../public/fonts/STF-serif.woff",
-      weight: "400",
-
-    },
-  ],
-  variable: "--font-stk-serif",
+const Garamond = EB_Garamond({
+  variable: "--font-eb-garamond",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "Bolt.new hackathon",
   description: "Biggest hackathon in the world.",
+  icons: '/favicon.svg',
 };
 
 export default function RootLayout({
@@ -37,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${STKserif.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${Garamond.variable} antialiased`}
       >
         {children}
       </body>

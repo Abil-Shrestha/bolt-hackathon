@@ -5,7 +5,6 @@ import CanvasComponent from "@/components/smoke-canvas";
 export default function Footer() {
     return (
         <>
-            <hr className="border-neutral-900 mt-12" />
             <div
                 className="relative h-[150px] md:h-[200px] lg:h-[300px] xl:h-[305px] "
                 style={{ clipPath: 'polygon(0% 0, 100% 0%, 100% 100%, 0 100%)' }}

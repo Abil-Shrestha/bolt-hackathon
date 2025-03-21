@@ -29,7 +29,7 @@ const Sponsors = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-stk-serif mb-4" id="sponsors-title">Our Sponsors</h2>
+          <h2 className="text-3xl md:text-4xl font-eb-garamond mb-4" id="sponsors-title">Our Sponsors</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
             Making the world's largest hackathon possible
           </p>
@@ -84,8 +84,8 @@ const Sponsors = () => {
               </div>
             ))}
           </div>
-           {/* First row */}
-           <div className="grid grid-cols-2 md:grid-cols-4 border-b border-b-white/10">
+          {/* First row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 border-b border-b-white/10">
             {sponsors.slice(0, 4).map((sponsor, index) => (
               <div
                 key={sponsor.name}

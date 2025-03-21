@@ -3,7 +3,7 @@ import { Cta } from './cta-button'
 
 const BotCTA = () => {
     return (
-        <div className="relative mx-auto mt-24 max-w-7xl sm:mt-56 sm:px-6 lg:px-8">
+        <div className="relative mx-auto mt-24 max-w-7xl sm:mt-56 sm:px-6 lg:px-8 h-[500px]">
            
             <div className="relative isolate overflow-hidden px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:py-32 items-center flex flex-col gap-12 bg-black ring ring-neutral-900 "> 
                 <h2 className="mx-auto max-w-2xl text-center text-3xl font-semibold tracking-tight text-white sm:text-4xl">

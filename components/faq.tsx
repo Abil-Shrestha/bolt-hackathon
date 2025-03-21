@@ -63,7 +63,7 @@ const FAQ = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-stk-serif mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-3xl md:text-4xl font-eb-garamond mb-4">Frequently Asked Questions</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Everything you need to know about the world's largest hackathon
           </p>
@@ -94,8 +94,8 @@ const FAQ = () => {
           <p className="text-lg text-gray-300 mb-6">
             Still have questions? We're here to help!
           </p>
-          <a 
-            href="mailto:info@hackathon.com" 
+          <a
+            href="mailto:info@hackathon.com"
             className="inline-block px-8 py-3 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition-colors"
           >
             Contact Us

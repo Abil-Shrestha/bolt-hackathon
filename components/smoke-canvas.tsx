@@ -449,10 +449,10 @@ export default function CanvasComponent() {
       </div>
       {/* Centered SVG */}
       <div className='relative h-full flex items-center justify-center'>
-        <img 
-          src='/footer.svg' 
-          alt='footer text' 
-          className='fill-white max-w-[80%] w-auto h-auto'
+        <img
+          src='/footer.svg'
+          alt='footer text'
+          className=' max-w-[80%] w-auto h-auto opacity-90'
         />
       </div>
     </div>

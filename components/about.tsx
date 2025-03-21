@@ -32,7 +32,7 @@ const About = () => {
         <section className="text-white mb-24">
             {/* No need for container, borders or padding as they're handled by SectionWrapper */}
             {/* Section Title */}
-            <h2 className="text-3xl md:text-4xl font-stk-serif mb-16 text-center">About the Hackathon</h2>
+            <h2 className="text-3xl md:text-4xl font-eb-garamond mb-16 text-center">About the Hackathon</h2>
 
             {/* Description Section */}
             <div className="mb-20">
@@ -73,7 +73,7 @@ const About = () => {
 
             {/* Theme Section */}
             <div className="mb-20">
-                <h4 className="text-xl md:text-2xl font-stk-serif text-center mb-6">"Building for the Future"</h4>
+                <h4 className="text-xl md:text-2xl font-eb-garamond text-center mb-6">"Building for the Future"</h4>
                 <div className=" p-8 rounded-lg">
 
                     <p className="text-lg text-gray-300 text-center max-w-3xl mx-auto">
@@ -107,7 +107,7 @@ const About = () => {
 
             {/* Organizers Section */}
             <div>
-                <h4 className="text-xl md:text-2xl font-stk-serif text-center mb-6">Organizers</h4>
+                <h4 className="text-xl md:text-2xl font-eb-garamond text-center mb-6">Organizers</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     {organizers.map((organizer) => (
                         <div key={`${organizer.name}-${organizer.role}`} className="bg-black p-6 rounded-lg  text-center transition-transform ">
