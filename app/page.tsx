@@ -4,7 +4,6 @@ import Prizes from "@/components/prizes";
 import Sponsors from "@/components/sponsors";
 import Judges from "@/components/judges";
 import FAQ from "@/components/faq";
-import RegisterCTA from "@/components/register-cta";
 import BotCTA from "@/components/bot-cta";
 import SectionWrapper from "@/components/section-wrapper";
 import Footer from "@/components/footer";
