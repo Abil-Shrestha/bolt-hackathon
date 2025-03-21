@@ -7,6 +7,7 @@ import FAQ from "@/components/faq";
 import RegisterCTA from "@/components/register-cta";
 import BotCTA from "@/components/bot-cta";
 import SectionWrapper from "@/components/section-wrapper";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
       <Judges />
       <FAQ />
       <BotCTA />
-      <RegisterCTA />  
+      <Footer />
     </div>
   );
 }

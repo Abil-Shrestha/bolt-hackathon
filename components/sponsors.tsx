@@ -10,14 +10,14 @@ type Sponsor = {
 const Sponsors = () => {
   // Sample sponsors data - replace with actual data
   const sponsors: Sponsor[] = [
-    { name: "MongoDB", logo: "/sponsors/placeholder-logo.svg" },
-    { name: "Indeed", logo: "/sponsors/placeholder-logo.svg" },
-    { name: "Mercury", logo: "/sponsors/placeholder-logo.svg" },
-    { name: "Rippling", logo: "/sponsors/placeholder-logo.svg" },
-    { name: "Hexaware", logo: "/sponsors/placeholder-logo.svg" },
-    { name: "1840 & Co.", logo: "/sponsors/placeholder-logo.svg" },
-    { name: "Rho", logo: "/sponsors/placeholder-logo.svg" },
-    { name: "Golin", logo: "/sponsors/placeholder-logo.svg" },
+    { name: "EXA", logo: "/sponsors/exa.svg" },
+    { name: "Sentry", logo: "/sponsors/sentry.svg" },
+    { name: "Loops", logo: "/sponsors/loops.svg" },
+    { name: "Supabase", logo: "/sponsors/supabase-dark.png" },
+    { name: "Netlify", logo: "/sponsors/netlify-logo.png" },
+    { name: "Cloudflare", logo: "/sponsors/cloudflare.svg" },
+    { name: "AlgoFoundation", logo: "/sponsors/algorand-logo-white-CMYK.svg" },
+    { name: "HsrHackerHouse", logo: "/sponsors/hackerhouse.svg" },
     { name: "Workable", logo: "/sponsors/placeholder-logo.svg" },
     { name: "Knock", logo: "/sponsors/placeholder-logo.svg" },
     { name: "8Sleep", logo: "/sponsors/placeholder-logo.svg" },
@@ -40,14 +40,21 @@ const Sponsors = () => {
           {/* First row */}
           <div className="grid grid-cols-2 md:grid-cols-4 border-b border-b-white/10">
             {sponsors.slice(0, 4).map((sponsor, index) => (
-              <div 
+              <div
                 key={sponsor.name}
                 className={`flex h-[152px] items-center justify-center ${index < 2 ? 'border-b border-b-white/10 md:border-b-0' : ''} ${index % 2 === 0 ? 'border-r border-r-white/10' : ''} ${index < 3 ? 'md:border-r md:border-r-white/10' : ''}`}
               >
                 <div className="flex h-16 w-36 max-w-[80%] select-none items-center justify-center text-white md:w-[200px]">
-                  {/* Placeholder for logo - replace with actual SVG or Image component when you have logos */}
-                  <div className="h-10 w-max bg-white/5 rounded px-4 py-2 flex items-center justify-center">
-                    <p className="text-white/40">{sponsor.name}</p>
+                  <div className="relative w-32 h-16 flex items-center justify-center">
+                    <div className="w-[120px] h-[35px] relative flex items-center justify-center">
+                      <Image
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        width={120}
+                        height={35}
+                        className="object-scale-down"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -57,14 +64,68 @@ const Sponsors = () => {
           {/* Second row */}
           <div className="grid grid-cols-2 md:grid-cols-4 border-b border-b-white/10">
             {sponsors.slice(4, 8).map((sponsor, index) => (
-              <div 
+              <div
                 key={sponsor.name}
                 className={`flex h-[152px] items-center justify-center ${index < 2 ? 'border-b border-b-white/10 md:border-b-0' : ''} ${index % 2 === 0 ? 'border-r border-r-white/10' : ''} ${index < 3 ? 'md:border-r md:border-r-white/10' : ''}`}
               >
                 <div className="flex h-16 w-36 max-w-[80%] select-none items-center justify-center text-white md:w-[200px]">
-                  {/* Placeholder for logo */}
-                  <div className="h-10 w-max bg-white/5 rounded px-4 py-2 flex items-center justify-center">
-                    <p className="text-white/40">{sponsor.name}</p>
+                  <div className="relative w-32 h-16 flex items-center justify-center">
+                    <div className="w-[120px] h-[30px] relative flex items-center justify-center">
+                      <Image
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        width={120}
+                        height={30}
+                        className="object-scale-down"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+           {/* First row */}
+           <div className="grid grid-cols-2 md:grid-cols-4 border-b border-b-white/10">
+            {sponsors.slice(0, 4).map((sponsor, index) => (
+              <div
+                key={sponsor.name}
+                className={`flex h-[152px] items-center justify-center ${index < 2 ? 'border-b border-b-white/10 md:border-b-0' : ''} ${index % 2 === 0 ? 'border-r border-r-white/10' : ''} ${index < 3 ? 'md:border-r md:border-r-white/10' : ''}`}
+              >
+                <div className="flex h-16 w-36 max-w-[80%] select-none items-center justify-center text-white md:w-[200px]">
+                  <div className="relative w-32 h-16 flex items-center justify-center">
+                    <div className="w-[120px] h-[35px] relative flex items-center justify-center">
+                      <Image
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        width={120}
+                        height={35}
+                        className="object-scale-down"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Second row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 border-b border-b-white/10">
+            {sponsors.slice(4, 8).map((sponsor, index) => (
+              <div
+                key={sponsor.name}
+                className={`flex h-[152px] items-center justify-center ${index < 2 ? 'border-b border-b-white/10 md:border-b-0' : ''} ${index % 2 === 0 ? 'border-r border-r-white/10' : ''} ${index < 3 ? 'md:border-r md:border-r-white/10' : ''}`}
+              >
+                <div className="flex h-16 w-36 max-w-[80%] select-none items-center justify-center text-white md:w-[200px]">
+                  <div className="relative w-32 h-16 flex items-center justify-center">
+                    <div className="w-[120px] h-[30px] relative flex items-center justify-center">
+                      <Image
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        width={120}
+                        height={30}
+                        className="object-scale-down"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -72,27 +133,35 @@ const Sponsors = () => {
           </div>
 
           {/* Third row */}
-          <div className="grid grid-cols-2 md:grid-cols-4">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4">
             {sponsors.slice(8, 12).map((sponsor, index) => (
-              <div 
+              <div
                 key={sponsor.name}
                 className={`flex h-[152px] items-center justify-center ${index < 2 ? 'border-b border-b-white/10 md:border-b-0' : ''} ${index % 2 === 0 ? 'border-r border-r-white/10' : ''} ${index < 3 ? 'md:border-r md:border-r-white/10' : ''}`}
               >
                 <div className="flex h-16 w-36 max-w-[80%] select-none items-center justify-center text-white md:w-[200px]">
-                  {/* Placeholder for logo */}
-                  <div className="h-10 w-max bg-white/5 rounded px-4 py-2 flex items-center justify-center">
-                    <p className="text-white/40">{sponsor.name}</p>
+                  <div className="relative w-32 h-16 flex items-center justify-center">
+                    <div className="w-[120px] h-[30px] relative flex items-center justify-center">
+                      <Image
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        width={120}
+                        height={30}
+                        className="object-scale-down"
+                        style={{ width: '120px', height: '30px' }}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Highlight Text */}
         <div className="mt-12 max-w-3xl mx-auto text-center">
           <p className="text-gray-300">
-            Our hackathon is made possible by the generous support of industry-leading organizations 
+            Our hackathon is made possible by the generous support of industry-leading organizations
             committed to fostering innovation and supporting the next generation of technology.
           </p>
         </div>

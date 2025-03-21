@@ -44,8 +44,9 @@ const SectionWrapper = ({ children, className = "" }: SectionWrapperProps) => {
         {/* Right border with pattern */}
         <div className="absolute top-1 bottom-1 right-0 w-8 border-l border-white/10 bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-white)]/10 max-lg:hidden" />
 
-        {/* Vertical dashed line through center */}
-        <div className="absolute top-1 bottom-1 left-1/2 transform -translate-x-1/2 border-l border-dashed border-white/10 z-0" />
+        {/* Two vertical dashed lines at 1/3 distance from edges */}
+        <div className="absolute top-1 bottom-1 left-1/3 border-l border-dashed border-white/10 z-0 opacity-80" />
+        <div className="absolute top-1 bottom-1 right-1/3 border-l border-dashed border-white/10 z-0 opacity-80" />
 
         {/* Content wrapper with padding to prevent overlap with borders */}
         <div className="px-10 relative z-10">
