@@ -33,7 +33,7 @@ const judgesData: Judge[] = [
     name: 'Levels.io',
     title: 'Indie Hacker',
     company: 'Levels.io',
-    imageUrl: '/images/judges/levels-io.png',
+    imageUrl: '/images/judges/levels.png',
   },
   {
     id: 4,

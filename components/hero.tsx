@@ -104,7 +104,7 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover transition-opacity duration-2000"
           muted
           playsInline
-          src="/bg.mov"
+          src="/bg.mp4"
           style={{ opacity: activeVideo === 1 ? '1' : '0' }}
         />
 
@@ -114,7 +114,7 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover transition-opacity duration-2000"
           muted
           playsInline
-          src="/bg.mov"
+          src="/bg.mp4"
           style={{ opacity: activeVideo === 2 ? '1' : '0' }}
         />
 
