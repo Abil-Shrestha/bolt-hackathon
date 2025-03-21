@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from 'react'
 import Image from 'next/image'
 
 type PrizeType = {
@@ -11,43 +10,49 @@ type PrizeType = {
 }
 
 const Prizes = () => {
-  // Sample prizes data
-  const prizes: PrizeType[] = [
-    {
-      title: "Grand Prize",
-      amount: "$500,000",
-      description: "Awarded to the team with the most innovative and impactful project that aligns with our hackathon theme.",
-      icon: "/prizes/trophy.svg"
-    },
+  // Grand Prize (Top Tier)
+  const grandPrize: PrizeType = {
+    title: "Grand Prize",
+    amount: "$500,000",
+    description: "Awarded to the team with the most innovative and impactful project that aligns with our hackathon theme.",
+    icon: "/prizes/grand-prize.png"
+  }
+  
+  // Second Tier Prizes
+  const secondTierPrizes: PrizeType[] = [
     {
       title: "Runner Up",
       amount: "$250,000",
       description: "For the second-place team that demonstrates exceptional technical execution and creativity.",
-      icon: "/prizes/medal.svg"
+      icon: "/prizes/runner.png"
     },
     {
       title: "Category Winners",
       amount: "$100,000 each",
       description: "Five category prizes for the best projects in AI, Sustainability, Web3, Health Tech, and Social Impact.",
-      icon: "/prizes/star.svg"
-    },
+      icon: "/prizes/category.png"
+    }
+  ]
+  
+  // Third Tier Prizes
+  const thirdTierPrizes: PrizeType[] = [
     {
       title: "Community Choice",
       amount: "$75,000",
       description: "Voted by hackathon participants and the wider tech community for the most beloved project.",
-      icon: "/prizes/heart.svg"
+      icon: "/prizes/community.png"
     },
     {
       title: "Best Technical Implementation",
       amount: "$50,000",
       description: "For the team that demonstrates the most impressive technical skills and innovation.",
-      icon: "/prizes/code.svg"
+      icon: "/prizes/technical.png"
     },
     {
       title: "Best UI/UX Design",
       amount: "$50,000",
       description: "Awarded to the project with the most intuitive, accessible, and visually appealing interface.",
-      icon: "/prizes/design.svg"
+      icon: "/prizes/ui:ux.png"
     }
   ]
 
@@ -55,57 +60,90 @@ const Prizes = () => {
   const totalPrizePool = "$1,000,000+"
 
   return (
-    <section className="py-24 bg-black text-white">
-      <div className="container mx-auto px-4 max-w-6xl">
-        {/* Content wrapper */}
-        <div>
-          {/* Section Title with Prize Pool */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-stk-serif mb-4">Prizes</h2>
-            <div className="inline-block bg-black border border-white/20 rounded-full px-8 py-3">
-              <p className="text-xl md:text-2xl font-bold">Total Prize Pool: <span className="text-white">{totalPrizePool}</span></p>
-            </div>
+    <section className="text-white">
+      {/* Section Title with Prize Pool */}
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-stk-serif mb-8">Prizes</h2>
+        <div className="inline-block bg-black border border-white/20 rounded-lg px-8 py-3">
+          <p className="text-xl md:text-2xl font-bold">Total Prize Pool: <span className="text-white">{totalPrizePool}</span></p>
+        </div>
+      </div>
+      
+      {/* Tree-like Prize Structure */}
+      <div className="space-y-12 max-w-5xl mx-auto">
+        {/* First Tier - Grand Prize */}
+        <div className="flex flex-col md:flex-row items-center gap-8 bg-black border border-white/10 rounded-lg p-8 mx-auto">
+          <div className="w-32 h-32 relative flex-shrink-0">
+            <Image 
+              src={grandPrize.icon} 
+              alt={grandPrize.title} 
+              fill 
+              className="object-contain" 
+            />
           </div>
-          
-          {/* Prize Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {prizes.map((prize, index) => (
-              <div 
-                key={prize.title} 
-                className="bg-black border border-white/10 rounded-lg p-8 transition-transform hover:scale-[1.02] relative overflow-hidden"
-              >
-                {/* Prize card content */}
-                <div className="relative z-10">
-                  {/* Icon placeholder - replace with actual icons */}
-                  <div className="w-12 h-12 mb-4 relative">
-                    <div className="absolute inset-0 bg-white/5 rounded-full" />
-                    {/* Uncomment when you have actual icons */}
-                    {/* <Image 
-                      src={prize.icon} 
-                      alt={prize.title} 
-                      fill 
-                      className="object-contain p-2" 
-                    /> */}
-                  </div>
-                  
-                  <h3 className="text-xl font-bold mb-2">{prize.title}</h3>
-                  <p className="text-2xl font-stk-serif text-white mb-4">{prize.amount}</p>
-                  <p className="text-gray-400">{prize.description}</p>
+          <div className="flex-1 text-center md:text-left">
+            <h3 className="text-2xl font-bold mb-2">{grandPrize.title}</h3>
+            <p className="text-3xl font-stk-serif text-white mb-4">{grandPrize.amount}</p>
+            <p className="text-gray-400">{grandPrize.description}</p>
+          </div>
+        </div>
+        
+        {/* Connecting Line */}
+        <div className="relative h-12 w-1 mx-auto">
+          <div className="absolute inset-0 border-l border-dashed border-white/10" />
+        </div>
+        
+        {/* Second Tier - Runner Up & Category Winners */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
+          {secondTierPrizes.map((prize) => (
+            <div 
+              key={prize.title} 
+              className="bg-black border border-white/10 rounded-lg overflow-hidden flex"
+            >
+              <div className="w-24 bg-black/30 flex items-center justify-center">
+                <div className="relative w-24 h-24 my-4">
+                  <Image 
+                    src={prize.icon} 
+                    alt={prize.title} 
+                    fill 
+                    className="object-contain" 
+                  />
                 </div>
-                
-                {/* Subtle diagonal pattern in background */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] opacity-5 [--pattern-fg:var(--color-white)]" />
               </div>
-            ))}
-          </div>
-          
-          {/* Additional Prizes Note */}
-          <div className="mt-16 text-center">
-            <p className="text-lg text-gray-300">
-              Additional prizes include mentorship opportunities, investor meetings, 
-              and incubator placements for promising projects.
-            </p>
-          </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-1">{prize.title}</h3>
+                <p className="text-2xl font-stk-serif text-white mb-2">{prize.amount}</p>
+                <p className="text-gray-400 text-sm">{prize.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Connecting Line */}
+        <div className="relative h-12 w-1 mx-auto">
+          <div className="absolute inset-0 border-l border-dashed border-white/10" />
+        </div>
+        
+        {/* Third Tier - Other Prizes */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto">
+          {thirdTierPrizes.map((prize) => (
+            <div 
+              key={prize.title} 
+              className="bg-black border border-white/10 rounded-lg p-4 flex flex-col items-center text-center"
+            >
+              <div className="w-12 h-12 relative mb-3">
+                <Image 
+                  src={prize.icon} 
+                  alt={prize.title} 
+                  fill 
+                  className="object-contain" 
+                />
+              </div>
+              <h3 className="text-lg font-bold mb-1">{prize.title}</h3>
+              <p className="text-xl font-stk-serif text-white mb-2">{prize.amount}</p>
+              <p className="text-gray-400 text-xs">{prize.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

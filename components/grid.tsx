@@ -32,7 +32,7 @@ const Square = memo(({
     // Generate gradient colors for dark theme
     const topGradientStyle = { background: 'linear-gradient(180deg, #0b1019 27%, #000000 90%)' };
 
-    const bottomGradientStyle = { background: 'linear-gradient(180deg, #000000 10%, #0b1019 73%)' };
+    const bottomGradientStyle = { background: 'linear-gradient(180deg, #000000 10%, #0b1019 90%)' };
 
     return (
         <div
@@ -177,7 +177,9 @@ const Background = ({
                         } as React.CSSProperties}
                     >
                         {/* Gradient overlay to fade to black at bottom */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-black/50 to-black pointer-events-none h-100" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-black/50 to-black pointer-events-none h-85" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black pointer-events-none h-25" />
+
                         {squaresArray.map((_, index) => {
                             // Determine if this square should have a gradient based on its position
                             const isTopGradientSquare = gradientType === 'top' && index < 11;

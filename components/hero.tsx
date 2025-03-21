@@ -146,11 +146,11 @@ const Hero = () => {
         
         {/* Optional: Add description */}
         <p className="text-lg md:text-xl text-gray-300 text-center max-w-2xl mb-8">
-          Biggest hackathon in the world
+          Show us what you got!
         </p>
         
         {/* Optional: CTA Button */}
-        <Cta cta="Register Now" />
+        <Cta cta="Register Now" cols={22} rows={5} />
       </div>
     </div>
   )
